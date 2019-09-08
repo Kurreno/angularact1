@@ -1,0 +1,11 @@
+<li class="list-group-item" [ngClass]="getClass()">
+  <div id="header">
+    <h1 [ngStyle]="{color: getColor()}">{{postTitle}}</h1><h4>{{postCreatedAt | async | date: 'dd/MM/y, h:mm a' | uppercase}}</h4>
+  </div>
+  <div id="conteneur">
+    <p [ngStyle]="{color: getColor()}">{{ postContent }}</p>
+    <button class="btn btn-success" (click)="loveLoveIt()">Love It !</button>
+    <button class="btn btn-danger" (click)="dontLoveIt()">Don't love It !</button>
+    ({{loveIt}})
+  </div>
+</li>
